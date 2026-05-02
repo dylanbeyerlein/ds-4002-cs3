@@ -31,8 +31,8 @@ from PIL import Image
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 DATA_DIR = PROJECT_ROOT / "DATA"
-IMAGE_DIR = DATA_DIR / "images"
-METADATA_PATH = DATA_DIR / "metadata.csv"
+IMAGE_DIR = DATA_DIR / "raw" / "images"
+METADATA_PATH = DATA_DIR / "raw" / "metadata.csv"
 
 OUTPUT_DIR = PROJECT_ROOT / "OUTPUT" / "figures"
 CLASS_DISTRIBUTION_PATH = OUTPUT_DIR / "class_distribution.png"
