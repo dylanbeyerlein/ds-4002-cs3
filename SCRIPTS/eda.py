@@ -34,7 +34,7 @@ DATA_DIR = PROJECT_ROOT / "DATA"
 IMAGE_DIR = DATA_DIR / "images"
 METADATA_PATH = DATA_DIR / "metadata.csv"
 
-OUTPUT_DIR = PROJECT_ROOT / "OUTPUT"
+OUTPUT_DIR = PROJECT_ROOT / "OUTPUT" / "figures"
 CLASS_DISTRIBUTION_PATH = OUTPUT_DIR / "class_distribution.png"
 SAMPLE_IMAGES_PATH = OUTPUT_DIR / "sample_images.png"
 IMAGE_SIZE_DISTRIBUTION_PATH = OUTPUT_DIR / "image_size_distribution.png"
