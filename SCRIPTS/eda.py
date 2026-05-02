@@ -122,7 +122,7 @@ def plot_anatomical_site_by_class(metadata):
     1. Count the number of images for each anatomical site within each class.
     2. Create side by side bar plots one for each class.
     3. Add a title, x-axis labels, y-axis labels, and legend.
-    4. Save teh figure to ANATOMICAL_SITE_PATH.
+    4. Save the figure to ANATOMICAL_SITE_PATH.
     """
     # TODO: Implement this function
     pass
