@@ -1,9 +1,4 @@
 """
-Resize images to a consistent size
-Remove unnecessary columns
-Split data into training and test
-Use stratified splitting to keep class balance
-
 This script should preprocess the image dataset before modeling.
 Students are expected to complete the TODO sections inside each function.
 
@@ -144,4 +139,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
