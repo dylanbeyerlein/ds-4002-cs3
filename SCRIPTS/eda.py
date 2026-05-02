@@ -51,8 +51,7 @@ def load_metadata():
     Load the metadata CSV file.
 
     1. Read the CSV file using pandas.
-    2. Ensure necessary columns exist.
-    3. Return the dataframe.
+    2. Return the dataframe.
     """
     # TODO: Implement this function.
     pass
