@@ -8,7 +8,7 @@ Expected output:
     3. train_metadata.csv
     4. test_metadata.csv
 
-Run the project root:
+Run from the project root:
     python SCRIPTS/preprocessing.py
 """
 
