@@ -64,6 +64,21 @@ TARGET_COLUMN = "target"
 # Helper functions
 # ========================================
 
+def create_directories():
+    """
+    Create the process data directories if they do not already exist.
+
+    GitHub does not track empty folders, so these folders may not exist
+    when someone first clones the repository.
+
+    1. Make PROCESSED_DIR.
+    2. Make PROCESSED_IMAGE_DIR.
+    """
+
+    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+    PROCESSED_IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+
+
 def load_metadata():
     """
     Load the metadata CSV file.
@@ -128,11 +143,13 @@ def main():
     Run all preprocessing steps.
     """
 
-    metadata = load_metadata()
-    clean_metadata = clean_metadata(metadata)
+    create_directories()
 
-    resize_images(clean_metadata)
-    split_train_test(clean_metadata)
+    metadata = load_metadata()
+    cleaned_metadata = clean_metadata(metadata)
+
+    resize_images(cleaned_metadata)
+    split_train_test(cleaned_metadata)
 
     print("Preprocessing complete. Files saved in:", PROCESSED_DIR)
 

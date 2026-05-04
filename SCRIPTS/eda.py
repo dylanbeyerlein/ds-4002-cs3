@@ -49,7 +49,7 @@ ANATOMICAL_SITE_PATH = FIGURE_DIR / "anatomical_site_by_class.png"
 # ========================================
 
 
-def create_output_directories():
+def create_directories():
     """
     Create the output directories if they do not already exist.
 
@@ -155,7 +155,7 @@ def main():
     Run all EDA plotting functions.
     """
 
-    create_output_directories()
+    create_directories()
 
     metadata = load_metadata()
 
