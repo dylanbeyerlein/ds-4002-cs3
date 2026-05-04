@@ -165,7 +165,7 @@ def main():
     plot_age_distribution_by_class(metadata)
     plot_anatomical_site_by_class(metadata)
 
-    print("EDA complete. Figures saved in:", OUTPUT_DIR)
+    print("EDA complete. Figures saved in:", FIGURE_DIR)
 
 
 if __name__ == "__main__":
