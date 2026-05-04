@@ -66,7 +66,7 @@ TARGET_COLUMN = "target"
 
 def create_directories():
     """
-    Create the process data directories if they do not already exist.
+    Create the processed data directories if they do not already exist.
 
     GitHub does not track empty folders, so these folders may not exist
     when someone first clones the repository.

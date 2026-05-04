@@ -64,6 +64,23 @@ NUM_CLASSES = 2
 
 
 # ========================================
+# Helper functions
+# ========================================
+
+def create_directories():
+    """
+    Create the output directories if they do not already exist.
+
+    GitHub does not track empty folders, so these folders may not exist
+    when someone first clones the repository.
+
+    1. Make MODEL_DIR.
+    """
+
+    MODEL_DIR.mkdir(parents=True, exist_ok=True)
+
+
+# ========================================
 # Data loading functions
 # ========================================
 
@@ -293,6 +310,8 @@ def main():
     """
     Run all model training steps.
     """
+
+    create_directories()
 
     train_metadata = load_training_metadata()
 
