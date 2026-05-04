@@ -163,7 +163,7 @@ def build_model():
     """
     Build the ResNet18 model.
 
-    ResNet18 is already trained to recognized general image patterns.
+    ResNet18 is already trained to recognize general image patterns.
     We freeze the pretrained layers so they do not change during training.
     Then, we replace the final layer because our project only has two classes:
     benign and malignant. 
