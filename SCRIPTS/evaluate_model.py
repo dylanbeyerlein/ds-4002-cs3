@@ -54,9 +54,10 @@ TEST_METADATA_PATH = PROCESSED_DIR / "test_metadata.csv"
 OUTPUT_DIR = PROJECT_ROOT / "OUTPUT"
 MODEL_DIR = OUTPUT_DIR / "model"
 FIGURE_DIR = OUTPUT_DIR / "figures"
+METRICS_DIR = OUTPUT_DIR / "metrics"
 
 MODEL_PATH = MODEL_DIR / "resnet18_model.pth"
-METRICS_PATH = OUTPUT_DIR / "metrics.csv"
+METRICS_PATH = METRICS_DIR / "metrics.csv"
 CONFUSION_MATRIX_PATH = FIGURE_DIR / "confusion_matrix.png"
 ROC_CURVE_PATH = FIGURE_DIR / "roc_curve.png"
 
@@ -73,6 +74,21 @@ BATCH_SIZE = 32
 NUM_CLASSES = 2
 
 CLASS_NAMES = ["benign", "malignant"]
+
+
+# ========================================
+# Helper functions
+# ========================================
+
+def create_directories():
+    """
+    Create the metrics directory if it does not already exist.
+
+    GitHub does not track empty folders, so these folders may not exist
+    when someone first clones the repository.
+    """
+
+    METRICS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 # ========================================
@@ -332,6 +348,8 @@ def main():
     """
     Run all model evaluation steps.
     """
+
+    create_directories()
 
     test_metadata = load_test_metadata()
 
