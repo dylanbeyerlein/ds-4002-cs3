@@ -34,17 +34,35 @@ DATA_DIR = PROJECT_ROOT / "DATA"
 IMAGE_DIR = DATA_DIR / "raw" / "images"
 METADATA_PATH = DATA_DIR / "raw" / "metadata.csv"
 
-OUTPUT_DIR = PROJECT_ROOT / "OUTPUT" / "figures"
-CLASS_DISTRIBUTION_PATH = OUTPUT_DIR / "class_distribution.png"
-SAMPLE_IMAGES_PATH = OUTPUT_DIR / "sample_images.png"
-IMAGE_SIZE_DISTRIBUTION_PATH = OUTPUT_DIR / "image_size_distribution.png"
-AGE_DISTRIBUTION_PATH = OUTPUT_DIR / "age_distribution_by_class.png"
-ANATOMICAL_SITE_PATH = OUTPUT_DIR / "anatomical_site_by_class.png"
+OUTPUT_DIR = PROJECT_ROOT / "OUTPUT"
+FIGURE_DIR = OUTPUT_DIR / "figures"
+
+CLASS_DISTRIBUTION_PATH = FIGURE_DIR / "class_distribution.png"
+SAMPLE_IMAGES_PATH = FIGURE_DIR / "sample_images.png"
+IMAGE_SIZE_DISTRIBUTION_PATH = FIGURE_DIR / "image_size_distribution.png"
+AGE_DISTRIBUTION_PATH = FIGURE_DIR / "age_distribution_by_class.png"
+ANATOMICAL_SITE_PATH = FIGURE_DIR / "anatomical_site_by_class.png"
 
 
 # ========================================
 # Helper functions
 # ========================================
+
+
+def create_output_directories():
+    """
+    Create the output directories if they do not already exist.
+
+    GitHub does not track empty folders, so these folders may not exist
+    when someone first clones the repository.
+
+    1. Make OUTPUT_DIR.
+    2. Make FIGURE_DIR.
+    """
+
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    FIGURE_DIR.mkdir(exist_ok=True)
+
 
 def load_metadata():
     """
@@ -136,6 +154,8 @@ def main():
     """
     Run all EDA plotting functions.
     """
+
+    create_output_directories()
 
     metadata = load_metadata()
 
