@@ -20,3 +20,8 @@ This folder contains materials to help you complete the Skin Lesion Classificati
 ### Scikit-learn
 - sklearn train_test_split: [https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html]
 - sklearn metrics: [https://scikit-learn.org/stable/api/sklearn.metrics.html]
+
+## Dataset Information
+
+# International Skin Imaging Collaboration
+- ISIC Challenge 2020 dataset: [https://challenge2020.isic-archive.com/]
