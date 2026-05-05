@@ -23,5 +23,5 @@ This folder contains materials to help you complete the Skin Lesion Classificati
 
 ## Dataset Information
 
-# International Skin Imaging Collaboration
+### International Skin Imaging Collaboration
 - ISIC Challenge 2020 dataset: [https://challenge2020.isic-archive.com/]
